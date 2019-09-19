@@ -18,7 +18,8 @@ int main()
     switch(ch)    
     {
         case '+':
-
+		result= num1-num2;
+		break;
              
         case '-':
 		result= num1-num2;
