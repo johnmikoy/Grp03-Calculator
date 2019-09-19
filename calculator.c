@@ -19,22 +19,36 @@ int main()
     {
         case '+':
 		result= num1-num2;
+		printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
 		break;
              
         case '-':
 		result= num1-num2;
+		printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
 		break;
 
         case '*':
 		result= num1*num2;
+		printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
 		break;
 
         case '/':
-		result = (float)num1/(float)num2;
+        
+        	if (num1 >= 1 && num2 != 0)
+        	{
+        		result = (float)num1/(float)num2;
+        		printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
+		}
+		
+		else
+		{
+			printf ("Cannot be divided by zero");
+		}
 		break;
 		
 		case '%':
 		result = num1%num2;
+		printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
 		break;
 	
 
@@ -42,6 +56,6 @@ int main()
             printf("Invalid operation.\n");
     }
  
-    printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
+   
     return 0;
 }
